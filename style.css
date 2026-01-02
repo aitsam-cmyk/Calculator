@@ -1,0 +1,35 @@
+
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+header { text-align: center; padding: 2rem 1rem; background: linear-gradient(120deg, #1e293b, #0ea5e9); }
+header h1 { margin: 0; }
+header p { margin: 0.5rem 0 0; opacity: 0.9; }
+.tabs { display: flex; gap: .5rem; padding: .75rem 1rem; background: #0b1222; position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #1f2937; }
+.tab-btn { padding: .6rem 1rem; border: 1px solid #334155; background: #111827; color: #e5e7eb; border-radius: 8px; cursor: pointer; }
+.tab-btn.active { background: #0ea5e9; border-color: #0ea5e9; color: #02131d; font-weight: 600; }
+main { padding: 1rem; }
+.section { display: none; }
+.section.active { display: block; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.card { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.card h2 { margin-top: 0; }
+.inputs label { display: block; margin: .5rem 0; }
+.inputs input { width: 100%; padding: .6rem; border-radius: 8px; border: 1px solid #334155; background: #0b1222; color: #e5e7eb; }
+.hint { font-size: .85rem; opacity: .8; margin-top: .25rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.actions button { padding: .55rem .85rem; border-radius: 8px; border: 1px solid #334155; background: #0ea5e9; color: #041421; cursor: pointer; }
+.actions button.danger { background: #ef4444; color: #1b0e0e; border-color: #ef4444; }
+.actions button:hover { filter: brightness(1.05); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.row .num { grid-column: span 1; }
+pre.result { background: #0b1222; border: 1px solid #334155; border-radius: 8px; padding: .75rem; overflow-x: auto; min-height: 2.5rem; }
+.criteria { width: 100%; border-collapse: collapse; }
+.criteria th, .criteria td { border: 1px solid #334155; padding: .5rem .6rem; text-align: left; }
+.criteria thead { background: #0b1222; }
+.subjects { width: 100%; border-collapse: collapse; }
+.subjects th, .subjects td { border: 1px solid #334155; padding: .5rem; }
+.subjects input { width: 100%; }
+.subjects .del { background: #ef4444; color: #1b0e0e; border-color: #ef4444; }
+#history-list { white-space: pre-wrap; background: #0b1222; border: 1px solid #334155; border-radius: 8px; padding: .75rem; min-height: 100px; }
+footer { padding: 1rem; text-align: center; opacity: .8; }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
